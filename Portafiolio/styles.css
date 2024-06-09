@@ -1,0 +1,509 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* Esta definido aca para que no moleste tanto al bajar*/
+  --bgsize: 60px 60px;
+  --bgposition: 0 0, 30px 30px;
+}
+.mainGrid {
+  transition: 0.5s;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  /* fondo */
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100vh;
+  perspective: 1000px;
+  background-color: white;
+  background-image: linear-gradient(
+    45deg,
+    rgb(0, 0, 0) 25%,
+    transparent 25%,
+    transparent 75%,
+    rgb(0, 0, 0) 75%,
+    rgb(0, 0, 0) 
+  ),
+  linear-gradient(
+    45deg,
+    rgb(0, 0, 0)  25%,
+    white 25%,
+    white 75%,
+    rgb(0, 0, 0)  75%,
+    rgb(0, 0, 0) 
+  );
+  background-size: var(--bgsize);
+  background-position: var(--bgposition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 500px rgb(15, 15, 15);
+}
+
+.div1 {
+  color: #ffffff;
+  grid-area: 1 / 1 / 13 / 9;
+}
+.div2 {
+  grid-area: 1 / 9 / 13 / 13;
+  position: relative;
+  overflow: hidden;
+}
+
+/* fondo */
+.mainGrid:before {
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 150%;
+  box-shadow: 0px -100px 500px black, inset 0px 100px 500px rgb(15, 15, 15);
+  position: absolute;
+  top: 55%;
+  background-image: linear-gradient(
+    45deg,
+    rgb(0, 0, 0) 25%,
+    transparent 25%,
+    transparent 75%,
+    rgb(0, 0, 0) 75%,
+    rgb(0, 0, 0) 
+  ),
+  linear-gradient(
+    45deg,
+    rgb(0, 0, 0)  25%,
+    white 25%,
+    white 75%,
+    rgb(0, 0, 0)  75%,
+    rgb(0, 0, 0) 
+  );
+  background-size: var(--bgsize);
+  background-position: var(--bgposition);
+  transform-origin: top;
+  transform: rotateX(80deg);
+}
+
+/* wea 3d no tocar FAVOR DE NO TOCAR */
+.wrapperMenu {
+  width: 300px;
+  height: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  perspective-origin: 35% 50%;
+  overflow-y: auto;
+  overflow: hidden;
+}
+.menu {
+  transform: rotateX(-14deg) rotateY(40deg) translate(0%,70%);
+}
+.boton1 {
+  font-size: 4vw;
+  color: #ffffff;
+  transition: 0.6s;
+  color: #fff;
+  text-shadow:
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 2px #fff,
+    0 0 2px rgb(0, 0, 0),
+    0 0 2px rgb(0, 0, 0),
+    0 0 3px rgb(0, 0, 0),
+    0 0 4px rgb(0, 0, 0),
+    0 0 4px rgb(0, 0, 0);
+}
+.boton1:hover {
+  font-size: 5vw;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+@keyframes bgFade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* carta negra */
+.HtextNegro {
+  padding-top: 5%;
+  padding-left: 10%;
+  font-size: 80px;
+  color: #fff;
+}
+p {
+  padding-left: 10%;
+  font-size: 10px;
+}
+.textNegro01 {
+  padding-left: 10%;
+  padding-top: -100%;
+  font-size: 20px;
+  color: #fff;
+}
+.textNegro02{
+  max-width: 70%;
+  padding-left: 7%;
+  padding-top: 10%;
+  font-size: 20px;
+  color: #fff;
+}
+.black img{
+  height: 50%;
+  position: absolute;
+  transform: translate(250%,-20%);
+}
+
+/* carta roja */
+.HtextRojo {
+  padding-top: 5%;
+  padding-left: 10%;
+  font-size: 80px;
+  color: #fff;
+}
+.textRojo01 {
+  padding-left: 10%;
+  padding-top: -100%;
+  font-size: 20px;
+  color: #fff;
+}
+.textRojo02{
+  max-width: 70%;
+  padding-left: 7%;
+  padding-top: 10%;
+  font-size: 20px;
+  color: #fff;
+}
+.black img{
+  height: 50%;
+  position: absolute;
+  transform: translate(250%,-20%);
+}
+
+/* carta azul */
+.HtextAzul {
+  padding-top: 5%;
+  padding-left: 10%;
+  font-size: 80px;
+  color: #fff;
+}
+.textAzul01 {
+  padding-left: 10%;
+  padding-top: -100%;
+  font-size: 20px;
+  color: #fff;
+}
+.textAzul02{
+  max-width: 70%;
+  padding-left: 7%;
+  padding-top: 10%;
+  font-size: 20px;
+  color: #fff;
+}
+.black img{
+  height: 50%;
+  position: absolute;
+  transform: translate(250%,-20%);
+}
+
+/* carta verde */
+.HtextGreen {
+  padding-top: 5%;
+  padding-left: 10%;
+  font-size: 80px;
+  color: #fff;
+}
+.textGreen01 {
+  padding-left: 10%;
+  padding-top: -100%;
+  font-size: 20px;
+  color: #fff;
+}
+.textGreen02{
+  max-width: 70%;
+  padding-left: 7%;
+  padding-top: 10%;
+  font-size: 20px;
+  color: #fff;
+}
+.black img{
+  height: 50%;
+  position: absolute;
+  transform: translate(250%,-20%);
+}
+
+
+/*Flip Carta*/
+
+.scene {
+  transform: translate(40%, 50%);
+  display: inline-block;
+  height: 50%;
+  width: 70%;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4), 10px 10px 0px 0px rgba(0, 0, 0, 0.3), 15px 15px 0px 0px rgba(0, 0, 0, 0.2), 20px 20px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card__face--back {
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4), 10px 10px 0px 0px rgba(0, 0, 0, 0.3), 15px 15px 0px 0px rgba(0, 0, 0, 0.2), 20px 20px 0px 0px rgba(0, 0, 0, 0.1);
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+/*fin Flip carta*/
+
+
+
+.padre{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  background-color: black;
+  flex-wrap: nowrap;
+}
+h1{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+p{
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+/*---------------CRI------------------*/
+.flip-card-cri {
+  margin-left: 10%;
+  margin-top: 10%;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
+}
+
+.flip-card-inner-cri {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-cri:hover .flip-card-inner-cri {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-cri, .flip-card-back-cri {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front-cri {
+  background-color: black;
+  color: black;
+}
+.flip-card-front-cri img{
+  height: 100%;
+  width: 100%;
+}
+
+.flip-card-back-cri {
+  background-color: rgb(255, 255, 255);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.text1cri{
+  transform: translate(0%,50%);
+}
+.text2cri{
+  transform: translate(-5%, 40%);
+}
+.text3cri{
+  transform: translate(-5%, 100%);
+}
+/*---------------EVIL-CRI------------------*/
+
+/*---------------ESTEBAN------------------*/
+.flip-card-est {
+  margin-left: 10%;
+  margin-top: 10%;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
+}
+
+.flip-card-inner-est {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-est:hover .flip-card-inner-est {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-est, .flip-card-back-est {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front-est {
+  background-color: black;
+  color: black;
+}
+.flip-card-front-est img{
+  height: 100%;
+  width: 100%;
+}
+
+.flip-card-back-est {
+  background-color: rgb(255, 255, 255);
+  color: white;
+  transform: rotateY(180deg);
+}
+.text1est{
+  transform: translate(0%,70%);
+}
+.text2est{
+  transform: translate(-5%, 60%);
+}
+.text3est{
+  transform: translate(-5%, 60%);
+}
+/*---------------EVIL-EST------------------*/
+
+/*---------------JOTAPE------------------*/
+.flip-card-jp {
+  margin-left: 10%;
+  margin-top: 10%;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
+}
+
+.flip-card-inner-jp {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-jp:hover .flip-card-inner-jp {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-jp, .flip-card-back-jp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front-jp {
+  background-color: black;
+  color: black;
+}
+.flip-card-front-jp img{
+  height: 100%;
+  width: 100%;
+}
+
+.flip-card-back-jp {
+  background-color: rgb(255, 255, 255);
+  color: white;
+  transform: rotateY(180deg);
+}
+.text1jp{
+  transform: translate(0%,70%);
+}
+.text2jp{
+  transform: translate(-5%, 60%);
+}
+.text3jp{
+  transform: translate(-5%, 120%);
+}
+/*---------------EVIL-jp------------------*/
+.separador{
+  background-color: #000000;
+  height: 20px;
+  width: 100%;
+  box-shadow: 0 0 10px  #000000;
+}
+.qnsms{
+  font-size: 5rem;
+  text-align: center;
+}/*titulo*/
+.qnsmstext{
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+  padding: 30px;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  background-color: black;
+}/*texto*/
